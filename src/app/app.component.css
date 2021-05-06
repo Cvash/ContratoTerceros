@@ -1,40 +1,4 @@
-section{
-    margin: 30px;
-}
-.btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-}
-@media all and (max-width: 600px){
-  button{
-      width:100%;
-      height:auto;
-      margin-left:10px;
-  }
-  p{
-    width:100%;
-    height:auto;
-    margin-left:10px;
-}
-}
 
-
-.my-container{
-   
-
-}
-.my-row{
-   
-    
-}
-.my-col{
-    
-    
-  justify-content: center;
-  
-    
-}
 
 
 
