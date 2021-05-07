@@ -39,11 +39,11 @@ export class ContractService {
       'UNICA-User': USER,
       'UNICA-Application': APPLICATION
     });
-  
+
     const options = { headers: headers };
-  
+
     return this.http.post( `${this.API_URL_CONTRACT}/registrarContract`, contract,  options );
-  
+
    }
 
 
@@ -56,13 +56,13 @@ export class ContractService {
       'UNICA-User': USER,
       'UNICA-Application': APPLICATION
     });
-  
+
     const options = { headers: headers };
-  
+
     return this.http.put( `${this.API_URL_CONTRACT}/registrarContract`,  options );
-  
+
    }
-  
+
 
    delContract() {
 
@@ -73,11 +73,11 @@ export class ContractService {
       'UNICA-User': USER,
       'UNICA-Application': APPLICATION
     });
-  
+
     const options = { headers: headers };
-  
+
     return this.http.delete( `${this.API_URL_CONTRACT}/registrarContract`, options );
-  
+
    }
 
 

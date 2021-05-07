@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
 
-import { AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { ContractService } from '../service/contract.service';
 import { HttpClient } from '@angular/common/http';
+import { ContractService } from 'src/app/service/contract.service';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class TableComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
@@ -51,7 +50,7 @@ export class TableComponent implements OnInit {
 
   dataSource = new MatTableDataSource(this.listarContract);
 }
-
+/*
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -81,3 +80,4 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
   { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
+*/
