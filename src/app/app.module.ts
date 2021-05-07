@@ -13,11 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './pages/home/home.component';
+import { GraficosComponent } from './pages/graficos/graficos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    HomeComponent,
+    GraficosComponent
   ],
   imports: [
     BrowserModule,
