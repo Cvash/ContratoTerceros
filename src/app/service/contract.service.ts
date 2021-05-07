@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { PID, SERVICEID, CLIENDID, USER, APPLICATION } from '../business/config/header.constant';
 
-import { PID, SERVICEID, CLIENDID, USER, APPLICATION } from 'src/app/business/flows/config/header.constant';
 
 @Injectable({
   providedIn: 'root'
