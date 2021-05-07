@@ -13,7 +13,12 @@ import { ContractService } from 'src/app/service/contract.service';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  CONTRACT_DATA: any = [];
+
+  dataSourceContract = new MatTableDataSource(this.CONTRACT_DATA);
+  dataSource = new MatTableDataSource(this.CONTRACT_DATA);
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'prueba'];
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -37,7 +42,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.contractService.getContract().subscribe(
       (res) => {
        // console.log('res', res);
-        this.listarContract = res;
+        // this.listarContract = res;
+        this.responseGetContract(res);
         console.log(this.listarContract);
       },
       (err) => {
@@ -46,9 +52,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     );
   }
 
-  dataSourceContract = new MatTableDataSource(this.listarContract);
+  responseGetContract(res){
+    this.CONTRACT_DATA = res;
+    console.log(this.CONTRACT_DATA);
+    this.dataSourceContract = new MatTableDataSource(this.CONTRACT_DATA);
+    /**  paginacion */
+    this.dataSourceContract.paginator = this.paginator;
+  }
 
-  dataSource = new MatTableDataSource(this.listarContract);
 }
 /*
 export interface PeriodicElement {
