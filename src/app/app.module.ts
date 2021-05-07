@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './pages/home/home.component';
 import { GraficosComponent } from './pages/graficos/graficos.component';
 import { ListasGestoresComponent } from './pages/listas-gestores/listas-gestores.component';
@@ -42,12 +42,10 @@ import { DescargarComponent } from './pages/descargar/descargar.component';
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatButtonModule
-   
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports:[
-    
   ]
 })
 export class AppModule { };

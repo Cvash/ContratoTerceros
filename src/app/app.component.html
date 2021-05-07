@@ -37,34 +37,35 @@
   </nav>
 </div>
 
-  <div class="container">
-    <div class="row mb-5 ">
-      <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">ENVIAR POR CORREO</button>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">LISTA DE GESTORES</button>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">VER GESTORES</button>
-      </div>
-
-      <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">DESCARGAR</button>
-      </div>
+<div class="container">
+  <div class="row mb-5 ">
+    <div class="col-md-3 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "enviarPorCorreo">ENVIAR POR CORREO</button>
     </div>
-    <div class="row mb-5">
-      <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">VER GRAFICOS</button>
-      </div>
-      <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">VER BASE HISTORICA</button>
-      </div>
-      <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">CONFIGURACION PERIODO</button>
-      </div>
+    <div class="col-md-3 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "listarGestores">LISTA DE GESTORES</button>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "verGestores">VER GESTORES</button>
+    </div>
+
+    <div class="col-md-3 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "descargas">DESCARGAR</button>
     </div>
   </div>
+  <div class="row mb-5">
+    <div class="col-md-4 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary" routerLink= "graficos">VER GRAFICOS</button>
+
+    </div>
+    <div class="col-md-4 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "verBaseHistorica">VER BASE HISTORICA</button>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center mb-3">
+      <button mat-raised-button color="primary"routerLink= "configuracionPeriodo">CONFIGURACION PERIODO</button>
+    </div>
+  </div>
+</div>
 
   <!-- fin de Navbar -->
 
