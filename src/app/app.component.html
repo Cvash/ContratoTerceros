@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="home">Home</a>
         </ul>
         <span class="navbar-text">
           Nombre de Usuario
@@ -40,34 +40,32 @@
   <div class="container">
     <div class="row mb-5 ">
       <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">ENVIAR POR CORREO</button>
+        <button mat-raised-button color="primary"routerLink= "enviarPorCorreo">ENVIAR POR CORREO</button>
       </div>
       <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">LISTA DE GESTORES</button>
+        <button mat-raised-button color="primary"routerLink= "listarGestores">LISTA DE GESTORES</button>
       </div>
       <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">VER GESTORES</button>
+        <button mat-raised-button color="primary"routerLink= "verGestores">VER GESTORES</button>
       </div>
       
       <div class="col-md-3 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">DESCARGAR</button>
+        <button mat-raised-button color="primary"routerLink= "descargas">DESCARGAR</button>
       </div>
     </div>
     <div class="row mb-5">
       <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary" routerLink= "vergrafico">VER GRAFICOS</button>
-        <router-outlet></router-outlet>
+        <button mat-raised-button color="primary" routerLink= "graficos">VER GRAFICOS</button>
+        
       </div>
       <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">VER BASE HISTORICA</button>
+        <button mat-raised-button color="primary"routerLink= "verBaseHistorica">VER BASE HISTORICA</button>
       </div>
       <div class="col-md-4 d-flex justify-content-center mb-3">
-        <button mat-raised-button color="primary">CONFIGURACION PERIODO</button>
+        <button mat-raised-button color="primary"routerLink= "configuracionPeriodo">CONFIGURACION PERIODO</button>
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-=======
   <!-- fin de Navbar -->
 
 <br>
@@ -78,7 +76,6 @@
   <router-outlet></router-outlet>
 
   <!-- Fin de tabla -->
->>>>>>> c19fa0056a6535fbd3ff59b150ab6ca21c129f3e
 
 
 </body>
