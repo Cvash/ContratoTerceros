@@ -9,8 +9,8 @@ import { ListasGestoresComponent } from './pages/listas-gestores/listas-gestores
 import { VerBaseHistoricaComponent } from './pages/ver-base-historica/ver-base-historica.component';
 import { VerGestoresComponent } from './pages/ver-gestores/ver-gestores.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  //{ path: 'home', component: HomeComponent },
   { path: 'graficos', component: GraficosComponent },
   { path: 'enviarPorCorreo', component: EnviarPorCorreoComponent},
   { path: 'verBaseHistorica', component: VerBaseHistoricaComponent },

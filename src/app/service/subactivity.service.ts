@@ -39,11 +39,11 @@ export class SubactivityService {
       'UNICA-User': USER,
       'UNICA-Application': APPLICATION
     });
-  
+
     const options = { headers: headers };
-  
+
     return this.http.post( `${this.API_URL_SUBACTIVTY}/registrarSubactivity`, subactivity, options );
-  
+
    }
 
 
