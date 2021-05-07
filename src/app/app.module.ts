@@ -7,8 +7,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TableComponent } from './table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -19,7 +19,6 @@ import { GraficosComponent } from './pages/graficos/graficos.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent,
     HomeComponent,
     GraficosComponent
   ],
