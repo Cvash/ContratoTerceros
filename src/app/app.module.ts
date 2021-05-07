@@ -23,6 +23,7 @@ import { VerGestoresComponent } from './pages/ver-gestores/ver-gestores.componen
 import { VerBaseHistoricaComponent } from './pages/ver-base-historica/ver-base-historica.component';
 import { ConfiguracionPeriodoComponent } from './pages/configuracion-periodo/configuracion-periodo.component';
 import { DescargarComponent } from './pages/descargar/descargar.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { DescargarComponent } from './pages/descargar/descargar.component';
     HttpClientModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
