@@ -1,3 +1,563 @@
-<nav>
-    <h1>Base Historica de Gestores</h1>
-</nav>
+<div>
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="2019">
+
+            <div class="mt-5">
+                <mat-tab-group mat-align-tabs="center">
+
+                    <mat-tab label="1° TRIMESTRE">
+
+                       <div class="container">
+                        <div class="row pt-5">
+                            <div class="container">
+                              <div class="mat-elevation-z8">
+                                <table mat-table [dataSource]="dataSourceContract">
+                      
+                                  <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="weight">
+                                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="symbol">
+                                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="prueba">
+                                    <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                      
+                                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+
+                    </mat-tab>
+                    <mat-tab label="2° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="3° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="4° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+
+                </mat-tab-group>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="2020">
+
+            <div class="mt-5">
+                <mat-tab-group mat-align-tabs="center">
+
+                    <mat-tab label="1° TRIMESTRE">
+
+                       <div class="container">
+                        <div class="row pt-5">
+                            <div class="container">
+                              <div class="mat-elevation-z8">
+                                <table mat-table [dataSource]="dataSourceContract">
+                      
+                                  <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="weight">
+                                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="symbol">
+                                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="prueba">
+                                    <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                      
+                                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+
+                    </mat-tab>
+                    <mat-tab label="2° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="3° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="4° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+
+                </mat-tab-group>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="2021">
+
+            <div class="mt-5">
+                <mat-tab-group mat-align-tabs="center">
+
+                    <mat-tab label="1° TRIMESTRE">
+
+                       <div class="container">
+                        <div class="row pt-5">
+                            <div class="container">
+                              <div class="mat-elevation-z8">
+                                <table mat-table [dataSource]="dataSourceContract">
+                      
+                                  <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="weight">
+                                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="symbol">
+                                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <ng-container matColumnDef="prueba">
+                                    <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                  </ng-container>
+                      
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                      
+                                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+
+                    </mat-tab>
+                    <mat-tab label="2° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="3° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+                    <mat-tab label="4° TRIMESTRE">
+
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="container">
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSourceContract">
+                          
+                                      <ng-container matColumnDef="position">
+                                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="name">
+                                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="weight">
+                                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="symbol">
+                                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <ng-container matColumnDef="prueba">
+                                        <th mat-header-cell *matHeaderCellDef> prueba </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.canal}} </td>
+                                      </ng-container>
+                          
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                          
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+
+                    </mat-tab>
+
+                </mat-tab-group>
+            </div>
+
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
