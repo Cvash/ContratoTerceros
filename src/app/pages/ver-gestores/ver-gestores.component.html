@@ -1,53 +1,150 @@
-<div class="container">
-    <div class="row">
-        <h1>Tabla de gestores (manager)</h1>
-    </div>
-    <div class="row">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Cantidad de Contratos</th>
-                    <th scope="col">Numero de contacto</th>
-                    <th scope="col">Ver Detalles</th>
-                    <th scope="col">Ver perfil</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td><button><i class="fas fa-plus"></i></button></td>
-                    <td><button><i class="fas fa-user"></i></button></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td><button><i class="fas fa-plus"></i></button></td>
-                    <td><button><i class="fas fa-user"></i></button></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td><button><i class="fas fa-plus"></i></button></td>
-                    <td><button><i class="fas fa-user"></i></button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div>
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="2019">
+
+            <div class="container mt-5 ">
+                <div class="example-button-row">
+                    <button mat-stroked-button color="primary" mat-button (click)="openDialog()">TRANSFERIR CONTRATO</button>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row mb-5">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"><i class="fas fa-user-tie"></i> Nombre de Gestor</th>
+                                <th scope="col"><i class="fas fa-file-alt"></i> N° de contrato</th>
+                                <th scope="col"><i class="fab fa-whatsapp"></i> Teléfono</th>
+                                <th scope="col"><i class="fas fa-envelope"></i> Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="1">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="2020">
+
+            <div class="container mt-5 ">
+                <div class="example-button-row">
+                    <button mat-stroked-button color="primary" mat-button (click)="openDialog()">TRANSFERIR CONTRATO</button>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row mb-5">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"><i class="fas fa-user-tie"></i> Nombre de Gestor</th>
+                                <th scope="col"><i class="fas fa-file-alt"></i> N° de contrato</th>
+                                <th scope="col"><i class="fab fa-whatsapp"></i> Teléfono</th>
+                                <th scope="col"><i class="fas fa-envelope"></i> Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="1">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="2021">
+
+            <div class="container mt-5 ">
+                <div class="example-button-row">
+                    <button mat-stroked-button color="primary" mat-button (click)="openDialog()">TRANSFERIR CONTRATO</button>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row mb-5">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"><i class="fas fa-user-tie"></i> Nombre de Gestor</th>
+                                <th scope="col"><i class="fas fa-file-alt"></i> N° de contrato</th>
+                                <th scope="col"><i class="fab fa-whatsapp"></i> Teléfono</th>
+                                <th scope="col"><i class="fas fa-envelope"></i> Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="1">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>ejemplo@ejemplo.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </mat-tab>
+        <!-- <mat-tab label="Otro">Otro</mat-tab>
+      <mat-tab label="No se">No se</mat-tab> -->
+    </mat-tab-group>
 </div>
-
-
-<!-- DAtos para borrar -->
-
-
-<p>
-
-</p>

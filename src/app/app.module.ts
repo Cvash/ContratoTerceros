@@ -5,7 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,12 +18,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { GraficosComponent } from './pages/graficos/graficos.component';
 
 import { ListasGestoresComponent } from './pages/listas-gestores/listas-gestores.component';
-import { EnviarPorCorreoComponent } from './pages/enviar-por-correo/enviar-por-correo.component';
 import { VerGestoresComponent } from './pages/ver-gestores/ver-gestores.component';
 import { VerBaseHistoricaComponent } from './pages/ver-base-historica/ver-base-historica.component';
-import { ConfiguracionPeriodoComponent } from './pages/configuracion-periodo/configuracion-periodo.component';
-import { DescargarComponent } from './pages/descargar/descargar.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { TrasferenciaContratosComponent } from './pages/popups/trasferencia-contratos/trasferencia-contratos.component';
+import { EjemploComponent } from './pages/popups/ejemplo/ejemplo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
@@ -31,11 +35,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     HomeComponent,
     GraficosComponent,
     ListasGestoresComponent,
-    EnviarPorCorreoComponent,
     VerGestoresComponent,
     VerBaseHistoricaComponent,
-    ConfiguracionPeriodoComponent,
-    DescargarComponent
+    FormularioComponent,
+    TrasferenciaContratosComponent,
+    EjemploComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +47,14 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatStepperModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatTabsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

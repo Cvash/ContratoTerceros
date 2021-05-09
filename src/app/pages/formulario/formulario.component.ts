@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-enviar-por-correo',
-  templateUrl: './enviar-por-correo.component.html',
-  styleUrls: ['./enviar-por-correo.component.css']
+  selector: 'app-formulario',
+  templateUrl: './formulario.component.html',
+  styleUrls: ['./formulario.component.css']
 })
-export class EnviarPorCorreoComponent implements OnInit {
+export class FormularioComponent implements OnInit {
 
   email = new FormControl('', [Validators.required, Validators.email]);
 
@@ -17,6 +17,7 @@ export class EnviarPorCorreoComponent implements OnInit {
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
+
 
   constructor() { }
 
