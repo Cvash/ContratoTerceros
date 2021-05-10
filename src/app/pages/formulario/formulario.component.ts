@@ -12,16 +12,13 @@ export class FormularioComponent implements OnInit {
   profileForm3: FormGroup;
   profileForm4: FormGroup;
   profileForm5: FormGroup;
-
+  profileForm6: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.profileForm = this.formBuilder.group({
       FullName: [''],
       Email: [''],
       Telefono: [''],
-
-
-
     })
     this.profileForm2 = this.formBuilder.group({
       FullName: [''],
@@ -31,11 +28,11 @@ export class FormularioComponent implements OnInit {
     })
     this.profileForm3 = this.formBuilder.group({
       FullName: [''],
-
-
-
     })
     this.profileForm4 = this.formBuilder.group({
+      FullName: [''],
+    })
+    this.profileForm5 = this.formBuilder.group({
       TrimestreUno: [''],
       TrimestreDos: [''],
       TrimestreTres: [''],
@@ -44,7 +41,7 @@ export class FormularioComponent implements OnInit {
 
 
     })
-    this.profileForm5 = this.formBuilder.group({
+    this.profileForm6 = this.formBuilder.group({
       FullName: [''],
       TrimestreUno: [''],
       TrimestreDos: [''],
@@ -55,6 +52,7 @@ export class FormularioComponent implements OnInit {
 
     })
   }
+  
   saveForm(values) {
     console.log('reactiveForm', values)
   }

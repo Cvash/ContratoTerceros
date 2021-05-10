@@ -26,29 +26,9 @@
                     <input formControlName="Telefono" matInput placeholder="Telefono">
                   </mat-form-field>
                 </div>
-                <div class="col-sm-">
-                  <mat-form-field class="full-width">
-                    <textarea formControlName="Status" matInput placeholder="Status"></textarea>
-                  </mat-form-field>
-                </div>
-
-
-                <!--<div class="col-md-6">
-                        <mat-form-field class="full-width">
-                          <input  formControlName="job" matInput placeholder="Job">
-                        </mat-form-field>
-                      </div>-->
-
-
+               
               </div>
-              <!--<div class="row">
-                        <div class="col-md-12">
-                            <mat-radio-group  formControlName="gender" class="margin-left">
-                                <mat-radio-button value="male"> Male </mat-radio-button>
-                                <mat-radio-button value="female"> Female </mat-radio-button>
-                            </mat-radio-group>
-                        </div>
-                    </div>-->
+             
             </mat-card-content>
             <mat-card-actions>
               <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
@@ -76,15 +56,27 @@
                     <input formControlName="FullName" matInput placeholder="Full Name">
                   </mat-form-field>
                 </div>
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
-                    <input formControlName="IDdirection" matInput placeholder="ID Direction">
+               <div class="col-md-3 "> 
+
+                  <mat-form-field>
+                    
+                    <mat-label>ID Direction</mat-label>
+                    
+                    <mat-select>
+                      <mat-option value="angular">DIRECCION DE B2B</mat-option>
+                      <mat-option value="ionic">DIRECCION DE B2C</mat-option>
+                      <mat-option value="rest">DIRECCION DE EXCELENCIA OPERACIONAL</mat-option>
+                      <mat-option value="vue">DIRECCION DE FINANZAS Y CONTROL</mat-option>
+                      <mat-option value="bash">DIRECCION DE PERSONAS</mat-option>
+                      <mat-option value="bash">DIRECCION DE TECNOLOGIA</mat-option>
+                    </mat-select>
                   </mat-form-field>
+          
                 </div>
               </div>
             </mat-card-content>
             <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm(profileForm2.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
@@ -108,7 +100,7 @@
               </div>
             </mat-card-content>
             <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm(profileForm3.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
@@ -132,7 +124,7 @@
               </div>
             </mat-card-content>
             <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm(profileForm4.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
@@ -167,16 +159,28 @@
                     <input formControlName="TrimestreCuatro" matInput placeholder="4Q">
                   </mat-form-field>
                 </div>
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
-                    <input formControlName="IDcontract" matInput placeholder="ID Contract">
+                <div class="col-md-3 "> 
+
+                  <mat-form-field>
+                    
+                    <mat-label>ID CONTRACT</mat-label>
+                    
+                    <mat-select>
+                      <mat-option value="angular">CONTRACT 1</mat-option>
+                      <mat-option value="ionic">CONTRACT 2</mat-option>
+                      <mat-option value="rest">CONTRACT 3</mat-option>
+                      <mat-option value="vue">CONTRACT 4</mat-option>
+                      <mat-option value="bash">CONTRACT 5</mat-option>
+                      <mat-option value="bash">CONTRACT 6</mat-option>
+                    </mat-select>
                   </mat-form-field>
+          
                 </div>
               </div>
             </mat-card-content>
 
             <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm(profileForm5.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
@@ -220,7 +224,7 @@
             </mat-card-content>
 
             <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm(profileForm6.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
