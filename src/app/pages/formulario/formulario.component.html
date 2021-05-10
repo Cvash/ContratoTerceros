@@ -1,100 +1,230 @@
 <div class="container">
-    <mat-tab-group mat-align-tabs="center">
-      <mat-tab label="Management">
-        <div class="container">
-  
-          <!-- Star Form -->
-          <div>
-            <div class="container">
-              <form [formGroup]="profileForm" class="form-container">
-                <mat-card>
-                  <mat-card-header>
-                    <mat-card-title>Profile Information</mat-card-title>
-                  </mat-card-header>
-                  <mat-card-content>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <mat-form-field class="full-width">
-                          <input formControlName="firstName" matInput placeholder="First name">
-                        </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
-                        <mat-form-field class="full-width">
-                          <input  formControlName="lastName" matInput placeholder="Last name">
-                        </mat-form-field>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <mat-form-field class="full-width">
-                          <textarea  formControlName="address" matInput placeholder="Address"></textarea>
-                        </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Manager">
+
+
+      <div class="container">
+        <form [formGroup]="profileForm" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando Manager </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="FullName" matInput placeholder="Full Name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="Email" matInput placeholder="Email">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="Telefono" matInput placeholder="Telefono">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-">
+                  <mat-form-field class="full-width">
+                    <textarea formControlName="Status" matInput placeholder="Status"></textarea>
+                  </mat-form-field>
+                </div>
+
+
+                <!--<div class="col-md-6">
                         <mat-form-field class="full-width">
                           <input  formControlName="job" matInput placeholder="Job">
                         </mat-form-field>
-                      </div>
-                    </div>
-                    <div class="row">
+                      </div>-->
+
+
+              </div>
+              <!--<div class="row">
                         <div class="col-md-12">
                             <mat-radio-group  formControlName="gender" class="margin-left">
                                 <mat-radio-button value="male"> Male </mat-radio-button>
                                 <mat-radio-button value="female"> Female </mat-radio-button>
                             </mat-radio-group>
                         </div>
-                    </div>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
-                  </mat-card-actions>
-                </mat-card>
-              </form>
-          </div>
-        
-        
-        
-           
-          </div>
-          <!-- End form -->
+                    </div>-->
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
 
-        </div>
-      </mat-tab>
-      <mat-tab label="Supplier">
-        <div class="container">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </mat-tab>
-      <mat-tab label="Direction">Direccion</mat-tab>
-      <mat-tab label="Number Workers">Número de Trabajores</mat-tab>
-      <!-- <mat-tab label="No se">No se</mat-tab> -->
-    </mat-tab-group>
+
+
+    </mat-tab>
+    <mat-tab label="Management">
+
+
+      <div class="container">
+        <form [formGroup]="profileForm2" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando Management </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="FullName" matInput placeholder="Full Name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="IDdirection" matInput placeholder="ID Direction">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Suplleir">
+      <div class="container">
+        <form [formGroup]="profileForm3" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando Suplleir </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="FullName" matInput placeholder="Full Name">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Direction">
+      <div class="container">
+        <form [formGroup]="profileForm3" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando Direction </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="FullName" matInput placeholder="Full Name">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab label="NumberWorker">
+      <div class="container">
+        <form [formGroup]="profileForm4" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando NumberWorker </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreUno" matInput placeholder="1Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreDos" matInput placeholder="2Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreTres" matInput placeholder="3Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreCuatro" matInput placeholder="4Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="IDcontract" matInput placeholder="ID Contract">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab label="ContractExpenses ">
+      <div class="container">
+        <form [formGroup]="profileForm4" class="form-container">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Registrando ContractExpenses </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="FullName" matInput placeholder="Full Name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreUno" matInput placeholder="1Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreDos" matInput placeholder="2Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreTres" matInput placeholder="3Q">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="full-width">
+                    <input formControlName="TrimestreCuatro" matInput placeholder="4Q">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+
+            <mat-card-actions>
+              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
