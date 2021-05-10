@@ -25,14 +25,14 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { TrasferenciaContratosComponent } from './pages/popups/trasferencia-contratos/trasferencia-contratos.component';
 import { EjemploComponent } from './pages/popups/ejemplo/ejemplo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import {MatStepperModule} from '@angular/material/stepper';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 
-import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -64,15 +64,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatTabsModule,
     ReactiveFormsModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
+
     MatRadioModule,
     MatCardModule,
-    MatButtonModule,
+    MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule  
+    MatNativeDateModule
 
   ],
   providers: [],
