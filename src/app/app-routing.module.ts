@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'graficos', component: GraficosComponent },
-  { path: 'enviarPorCorreo', component: FormularioComponent},
+  { path: 'formulario', component: FormularioComponent},
   { path: 'verBaseHistorica', component: VerBaseHistoricaComponent },
   { path: 'verGestores', component: VerGestoresComponent },
   { path: 'listarGestores', component: ListasGestoresComponent },

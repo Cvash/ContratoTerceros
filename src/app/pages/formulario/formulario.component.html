@@ -1,47 +1,108 @@
-<div>
+<div class="container">
     <mat-tab-group mat-align-tabs="center">
-      <mat-tab label="Contract Expenses">
+      <mat-tab label="Mnagement">
         <div class="container">
   
-          <div class="row">
-            <h1 class="mt-5">Datos de actualización de Perfil (manager, supplier)</h1>
-            <p>Se edita desde la misma tabla</p>
+          <!-- Star Form -->
+          <div>
+            <mat-tab-group mat-align-tabs="center">
+              <mat-tab label="Contract Expenses">
+               
+              </mat-tab>
+              <mat-tab label="Number Workers">
+                <div class="container">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </mat-tab>
+              <mat-tab label="Contract expenses">Contract expenses</mat-tab>
+              <!-- <mat-tab label="Otro">Otro</mat-tab>
+              <mat-tab label="No se">No se</mat-tab> -->
+            </mat-tab-group>
+        
+        
+        
+        
+            <div class="container">
+              <form [formGroup]="profileForm" class="form-container">
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>Profile Information</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <mat-form-field class="full-width">
+                          <input formControlName="firstName" matInput placeholder="First name">
+                        </mat-form-field>
+                      </div>
+                      <div class="col-md-6">
+                        <mat-form-field class="full-width">
+                          <input  formControlName="lastName" matInput placeholder="Last name">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <mat-form-field class="full-width">
+                          <textarea  formControlName="address" matInput placeholder="Address"></textarea>
+                        </mat-form-field>
+                      </div>
+                      <div class="col-md-6">
+                        <mat-form-field class="full-width">
+                          <input  formControlName="job" matInput placeholder="Job">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <mat-radio-group  formControlName="gender" class="margin-left">
+                                <mat-radio-button value="male"> Male </mat-radio-button>
+                                <mat-radio-button value="female"> Female </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
+                  </mat-card-actions>
+                </mat-card>
+              </form>
           </div>
-  
-          <div class="row mt-5">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
+
           </div>
+          <!-- End form -->
+
         </div>
       </mat-tab>
-      <mat-tab label="Number Workers">
+      <mat-tab label="Supplier">
         <div class="container">
           <table class="table table-hover">
             <thead>
@@ -74,8 +135,8 @@
           </table>
         </div>
       </mat-tab>
-      <mat-tab label="Contract expenses">Contract expenses</mat-tab>
-      <!-- <mat-tab label="Otro">Otro</mat-tab>
-      <mat-tab label="No se">No se</mat-tab> -->
+      <mat-tab label="Direction">Direccion</mat-tab>
+      <mat-tab label="Number Workers">Número de Trabajores</mat-tab>
+      <!-- <mat-tab label="No se">No se</mat-tab> -->
     </mat-tab-group>
-  </div>
+</div>

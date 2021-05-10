@@ -26,7 +26,17 @@ import { TrasferenciaContratosComponent } from './pages/popups/trasferencia-cont
 import { EjemploComponent } from './pages/popups/ejemplo/ejemplo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+
+
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -53,7 +63,14 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule,
+
+    MatRadioModule,
+    MatCardModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [],

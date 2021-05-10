@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -8,18 +9,20 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
+  profileForm:FormGroup
+  constructor(private formBuilder: FormBuilder){
+      this.profileForm = this.formBuilder.group({
+        firstName:[''],
+        lastName:[''],
+        address:[''],
+        job:[''],
+        gender:['']
+      })
     }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  saveForm(values){
+    console.log('reactiveForm',values)
   }
 
-
-  constructor() { }
 
   ngOnInit(): void {
   }
