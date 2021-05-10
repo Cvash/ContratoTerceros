@@ -25,8 +25,17 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { TrasferenciaContratosComponent } from './pages/popups/trasferencia-contratos/trasferencia-contratos.component';
 import { EjemploComponent } from './pages/popups/ejemplo/ejemplo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatSelectModule } from '@angular/material/select';
+
 import {MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -53,7 +62,17 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule  
 
   ],
   providers: [],
