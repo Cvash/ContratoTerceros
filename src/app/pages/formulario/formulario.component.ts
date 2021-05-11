@@ -19,19 +19,19 @@ export class FormularioComponent implements OnInit {
       FullName: [''],
       Email: [''],
       Telefono: [''],
-    })
+    });
     this.profileForm2 = this.formBuilder.group({
       FullName: [''],
       IDdirection: [''],
 
 
-    })
+    });
     this.profileForm3 = this.formBuilder.group({
       FullName: [''],
-    })
+    });
     this.profileForm4 = this.formBuilder.group({
       FullName: [''],
-    })
+    });
     this.profileForm5 = this.formBuilder.group({
       TrimestreUno: [''],
       TrimestreDos: [''],

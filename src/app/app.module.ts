@@ -36,7 +36,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatTabsModule,
     ReactiveFormsModule,
-
+    ChartsModule,
     MatRadioModule,
     MatCardModule,
     MatInputModule,
