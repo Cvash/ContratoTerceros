@@ -3,3 +3,67 @@
 <div class="container">
     <h1>Hola mundo desde el ver graficos</h1>
 </div>
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Grafico 1">
+
+<div>
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+      </div>
+      <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+    </div>
+  </div>
+</mat-tab>
+<mat-tab label="Grafico 2">
+   
+  <div>
+    <div style="display: block">
+      <canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+  </div>
+
+</mat-tab>
+
+
+<mat-tab label="Grafico 3">
+<div>
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</mat-tab>
+
+<mat-tab label="Grafico 4">
+<div>
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+          [datasets]="radarChartData"
+          [options]="radarChartOptions"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</mat-tab>
+</mat-tab-group>
