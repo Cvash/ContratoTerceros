@@ -28,7 +28,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ChartConfiguration, ChartDataSets, ChartOptions, ChartPoint, ChartType, PluginServiceGlobalRegistration, PluginServiceRegistrationOptions } from 'chart.js';
 
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
@@ -51,6 +51,7 @@ import { ChartsModule } from 'ng2-charts';
     EjemploComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
@@ -69,8 +70,10 @@ import { ChartsModule } from 'ng2-charts';
     MatCardModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    
 
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

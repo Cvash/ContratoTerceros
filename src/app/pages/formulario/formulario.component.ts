@@ -56,6 +56,9 @@ export class FormularioComponent implements OnInit {
   saveForm(values) {
     console.log('reactiveForm', values)
   }
+  saveForm6(values) {
+    console.log('reactiveForm', values)
+  }
 
 
 

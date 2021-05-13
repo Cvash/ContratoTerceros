@@ -4,61 +4,76 @@
 
 
       <div class="container">
-        <form [formGroup]="profileForm" class="form-container">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>Registrando Manager </mat-card-title>
+        
+        <form [formGroup]="profileForm" style="padding-top:30px"  class="form-container mt-2">
+          <mat-card class="container-form mat-elevation-z8">
+            <mat-card-header class="d-flex justify-content-center">
+              <mat-card-title style="font-size: 30px ; color: #2AA0EC;">Registrar Manager </mat-card-title>
             </mat-card-header>
-            <mat-card-content>
+            <mat-card-content class="d-flex justify-content-center pt-5" >
               <div class="row">
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                <div class="col-md-4">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Full Name</mat-label>
                     <input formControlName="FullName" matInput placeholder="Full Name">
                   </mat-form-field>
                 </div>
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                <div class="col-md-4">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Email</mat-label>
                     <input formControlName="Email" matInput placeholder="Email">
                   </mat-form-field>
+                 
                 </div>
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
-                    <input formControlName="Telefono" matInput placeholder="Telefono">
+                <div class="col-md-4">
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input  formControlName="Telefono" matInput placeholder="Telefono">
                   </mat-form-field>
                 </div>
                
               </div>
-             
+              <mat-card-actions class="d-flex justify-content-center pt-5">
+                <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Guardar</button>
+              </mat-card-actions>
+
+              
             </mat-card-content>
-            <mat-card-actions>
-              <button (click)="saveForm(profileForm.value)" mat-raised-button color="primary">Save</button>
-            </mat-card-actions>
-          </mat-card>
-        </form>
+
+           
+          
+   
+      </mat-card>
+    </form>
       </div>
-
-
-
     </mat-tab>
+
+    
     <mat-tab label="Management">
 
 
       <div class="container">
-        <form [formGroup]="profileForm2" class="form-container">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>Registrando Management </mat-card-title>
+        <mat-card class="container-form mat-elevation-z8">
+        <form [formGroup]="profileForm2"style="padding-top:30px" class="form-container">
+       
+            <mat-card-header class="d-flex justify-content-center">
+              <mat-card-title style="font-size: 30px ; color: #2AA0EC;">Registrando Management </mat-card-title>
             </mat-card-header>
-            <mat-card-content>
+
+
+
+            <mat-card-content class="d-flex justify-content-center pt-5">
               <div class="row">
-                <div class="col-md-3">
-                  <mat-form-field class="full-width">
-                    <input formControlName="FullName" matInput placeholder="Full Name">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input  formControlName="FullName" matInput placeholder="FullName">
                   </mat-form-field>
                 </div>
-               <div class="col-md-3 "> 
+               <div class="col-md-6"> 
 
-                  <mat-form-field>
+                <mat-form-field class="full-width mr-5" appearance="outline">
                     
                     <mat-label>ID Direction</mat-label>
                     
@@ -78,8 +93,9 @@
             <mat-card-actions>
               <button (click)="saveForm(profileForm2.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
+          </form>
           </mat-card>
-        </form>
+      
       </div>
     </mat-tab>
 
@@ -93,7 +109,8 @@
             <mat-card-content>
               <div class="row">
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Full Name</mat-label>
                     <input formControlName="FullName" matInput placeholder="Full Name">
                   </mat-form-field>
                 </div>
@@ -117,7 +134,8 @@
             <mat-card-content>
               <div class="row">
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Full Name</mat-label>
                     <input formControlName="FullName" matInput placeholder="Full Name">
                   </mat-form-field>
                 </div>
@@ -140,29 +158,34 @@
             <mat-card-content>
               <div class="row">
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>1° trimestre</mat-label>
                     <input formControlName="TrimestreUno" matInput placeholder="1Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>2° trimestre</mat-label>
                     <input formControlName="TrimestreDos" matInput placeholder="2Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>3° trimestre</mat-label>
                     <input formControlName="TrimestreTres" matInput placeholder="3Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>4° trimestre</mat-label>
                     <input formControlName="TrimestreCuatro" matInput placeholder="4Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3 "> 
 
-                  <mat-form-field>
-                    
+                  
+                    <mat-form-field class="full-width mr-5" appearance="outline">
+                  
                     <mat-label>ID CONTRACT</mat-label>
                     
                     <mat-select>
@@ -196,27 +219,32 @@
             <mat-card-content>
               <div class="row">
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>Full Name</mat-label>
                     <input formControlName="FullName" matInput placeholder="Full Name">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>1° trimestre</mat-label>
                     <input formControlName="TrimestreUno" matInput placeholder="1Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>2° trimestre</mat-label>
                     <input formControlName="TrimestreDos" matInput placeholder="2Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>3° trimestre</mat-label>
                     <input formControlName="TrimestreTres" matInput placeholder="3Q">
                   </mat-form-field>
                 </div>
                 <div class="col-md-3">
-                  <mat-form-field class="full-width">
+                  <mat-form-field class="full-width mr-5" appearance="outline">
+                    <mat-label>4° trimestre</mat-label>
                     <input formControlName="TrimestreCuatro" matInput placeholder="4Q">
                   </mat-form-field>
                 </div>
@@ -224,7 +252,7 @@
             </mat-card-content>
 
             <mat-card-actions>
-              <button (click)="saveForm(profileForm6.value)" mat-raised-button color="primary">Save</button>
+              <button (click)="saveForm6(profileForm6.value)" mat-raised-button color="primary">Save</button>
             </mat-card-actions>
           </mat-card>
         </form>
