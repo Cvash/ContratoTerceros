@@ -14,7 +14,7 @@ export class SupplierService {
   constructor( private http: HttpClient) { }
 
 
-  getSupplier() {
+  getSuppliers() {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -30,8 +30,24 @@ export class SupplierService {
 
   }
 
+  getSupplier(id: any) {
 
-  postSupplier(supplier: any) {
+    const headers = new HttpHeaders({
+      'UNICA-PID': PID,
+      'UNICA-ServiceId': SERVICEID,
+      'X-IBM-Client-Id': CLIENDID,
+      'UNICA-User': USER,
+      'UNICA-Application': APPLICATION
+    });
+
+    const options = { headers: headers };
+
+    return this.http.get(`${this.API_URL_SUPPLIER}/listarSupplier/${id}`, options);
+
+  }
+
+
+  saveSupplier(supplier: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -48,7 +64,7 @@ export class SupplierService {
    }
 
 
-   putSupplier() {
+   updateSupplier(id, putSupplier) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -60,12 +76,12 @@ export class SupplierService {
   
     const options = { headers: headers };
   
-    return this.http.put( `${this.API_URL_SUPPLIER}/listarManagement`, options );
+    return this.http.put( `${this.API_URL_SUPPLIER}/listarManagement/${id}`, putSupplier, options );
   
    }
 
 
-   delSupplier() {
+   deleteSupplier(id: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -77,7 +93,7 @@ export class SupplierService {
   
     const options = { headers: headers };
   
-    return this.http.delete( `${this.API_URL_SUPPLIER}/listarManagement`, options );
+    return this.http.delete( `${this.API_URL_SUPPLIER}/listarManagement/${id}`, options );
   
    }
 

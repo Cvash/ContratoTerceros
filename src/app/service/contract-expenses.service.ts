@@ -27,9 +27,25 @@ export class ContractExpensesService {
     return this.http.get( `${this.API_URL_CONTRACT_EXPENSES}/listarContract_expenses`, options );
 
   }
+// Para poder recoger solo un valor
+  getContractExpense( id: any) {
 
+    const headers = new HttpHeaders({
+      'UNICA-PID': PID,
+      'UNICA-ServiceId': SERVICEID,
+      'X-IBM-Client-Id': CLIENDID,
+      'UNICA-User': USER,
+      'UNICA-Application': APPLICATION
+    });
 
-  postContractExpenses( contractExpense: any) {
+    const options = { headers: headers };
+
+    return this.http.get( `${this.API_URL_CONTRACT_EXPENSES}/listarContract_expenses/${id}`, options );
+
+  }
+
+// Guardar informaci+on
+  saveContractExpenses( contractExpense: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -45,7 +61,8 @@ export class ContractExpensesService {
 
    }
 
-   putContractExpenses() {
+   // actualizar información
+   updateContractExpenses(id, putContractExpenses) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -57,11 +74,11 @@ export class ContractExpensesService {
 
     const options = { headers: headers };
 
-    return this.http.put( `${this.API_URL_CONTRACT_EXPENSES}/registrarContractExpenses`, options );
+    return this.http.put( `${this.API_URL_CONTRACT_EXPENSES}/registrarContractExpenses/${id}`, putContractExpenses, options );
 
    }
 
-   delContractExpenses() {
+   deleteContractExpenses( id: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -73,7 +90,7 @@ export class ContractExpensesService {
 
     const options = { headers: headers };
 
-    return this.http.delete( `${this.API_URL_CONTRACT_EXPENSES}/registrarContractExpenses`, options );
+    return this.http.delete( `${this.API_URL_CONTRACT_EXPENSES}/registrarContractExpenses/${id}`, options );
 
    }
 

@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   listarusuariosContract() {
-    this.contractService.getContract().subscribe(
+    this.contractService.getContracts().subscribe(
       (res) => {
        // console.log('res', res);
         // this.listarContract = res;

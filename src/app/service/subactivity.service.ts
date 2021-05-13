@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 /* Como se consume rutas es recomendable usar los HttpClient y HttpHeader */
 import { PID, SERVICEID, CLIENDID, USER, APPLICATION } from '../business/config/header.constant';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class SubactivityService {
   constructor( private http: HttpClient) { }
 
 
-  getSubactivity() {
+  getSubactivitys() {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -30,8 +31,24 @@ export class SubactivityService {
 
    }
 
+   getSubactivity(id: any) {
 
-   postSubactivity( subactivity: any ) {
+    const headers = new HttpHeaders({
+      'UNICA-PID': PID,
+      'UNICA-ServiceId': SERVICEID,
+      'X-IBM-Client-Id': CLIENDID,
+      'UNICA-User': USER,
+      'UNICA-Application': APPLICATION
+    });
+
+    const options = { headers: headers };
+
+    return this.http.get( `${this.API_URL_SUBACTIVTY}/listarSubactivity/${id}`, options );
+
+   }
+
+
+   saveSubactivity( subactivity: any ) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -48,7 +65,7 @@ export class SubactivityService {
    }
 
 
-   putSubactivity() {
+   updateSubactivity(id: any, putSubactivity: any): Observable<any> {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -60,12 +77,12 @@ export class SubactivityService {
   
     const options = { headers: headers };
   
-    return this.http.put( `${this.API_URL_SUBACTIVTY}/registrarSubactivity`, options );
+    return this.http.put( `${this.API_URL_SUBACTIVTY}/registrarSubactivity`, putSubactivity, options );
   
    }
 
 
-   delSubactivity() {
+   deleteSubactivity(id: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -77,7 +94,7 @@ export class SubactivityService {
   
     const options = { headers: headers };
   
-    return this.http.delete( `${this.API_URL_SUBACTIVTY}/registrarSubactivity`, options );
+    return this.http.delete( `${this.API_URL_SUBACTIVTY}/registrarSubactivity/${id}`, options );
   
    }
 

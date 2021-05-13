@@ -14,7 +14,7 @@ export class ManagementService {
   API_URL_MANAGEMENT = 'http://localhost:8096/contratoterceros/v7';
 
 
-  getManagement() {
+  getManagements() {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -30,8 +30,24 @@ export class ManagementService {
 
    }
 
+   getManagement(id: any) {
 
-   postManagement( management: any ) {
+    const headers = new HttpHeaders({
+      'UNICA-PID': PID,
+      'UNICA-ServiceId': SERVICEID,
+      'X-IBM-Client-Id': CLIENDID,
+      'UNICA-User': USER,
+      'UNICA-Application': APPLICATION
+    });
+
+    const options = { headers: headers };
+
+    return this.http.get( `${this.API_URL_MANAGEMENT}/listarManagement/${id}`, options );
+
+   }
+
+
+   saveManagement( management: any ) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -48,7 +64,7 @@ export class ManagementService {
    }
 
 
-   putManagement() {
+   updateManagement(id, putManagement) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -60,13 +76,13 @@ export class ManagementService {
   
     const options = { headers: headers };
   
-    return this.http.put( `${this.API_URL_MANAGEMENT}/registrarManagement`, options );
+    return this.http.put( `${this.API_URL_MANAGEMENT}/registrarManagement/${id}`, putManagement, options );
   
    }
 
 
 
-   delManagement() {
+   deleteManagement(id: any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -78,7 +94,7 @@ export class ManagementService {
   
     const options = { headers: headers };
   
-    return this.http.delete( `${this.API_URL_MANAGEMENT}/registrarManagement`, options );
+    return this.http.delete( `${this.API_URL_MANAGEMENT}/registrarManagement/${id}`, options );
   
    }
 

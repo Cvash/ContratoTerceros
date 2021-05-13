@@ -14,7 +14,7 @@ export class DirectionService {
   API_URL_DIRECTION = 'http://localhost:8096/contratoterceros/v6';
 
 
-  getDirection() {
+  getDirections() {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -30,8 +30,24 @@ export class DirectionService {
 
    }
 
+   getDirection(id: any) {
 
-   postDirection( direction: any ) {
+    const headers = new HttpHeaders({
+      'UNICA-PID': PID,
+      'UNICA-ServiceId': SERVICEID,
+      'X-IBM-Client-Id': CLIENDID,
+      'UNICA-User': USER,
+      'UNICA-Application': APPLICATION
+    });
+
+    const options = { headers: headers };
+
+    return this.http.get( `${this.API_URL_DIRECTION}/listarDirection/${id}`, options );
+
+   }
+
+
+   saveDirection( direction: any ) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -48,7 +64,7 @@ export class DirectionService {
    }
 
 
-   putDirection() {
+   updateDirection(id, putDirection) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -60,12 +76,12 @@ export class DirectionService {
   
     const options = { headers: headers };
   
-    return this.http.put( `${this.API_URL_DIRECTION}/registrarDirection`, options );
+    return this.http.put( `${this.API_URL_DIRECTION}/registrarDirection/${id}`, putDirection, options );
   
    }
 
 
-   delDirection() {
+   deleteDirection(id:any) {
 
     const headers = new HttpHeaders({
       'UNICA-PID': PID,
@@ -77,7 +93,7 @@ export class DirectionService {
   
     const options = { headers: headers };
   
-    return this.http.delete( `${this.API_URL_DIRECTION}/registrarDirection`, options );
+    return this.http.delete( `${this.API_URL_DIRECTION}/registrarDirection/${id}`, options );
   
    }
 
